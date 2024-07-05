@@ -1,0 +1,86 @@
+<div class="container-fluid mt-4">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3 class="mb-3">2 Ways to call API in Angular</h3>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Using HttpClientModule</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Using httpClient service to get the data
+              </h6>
+              <br />
+              <h4>Api call method in component</h4>
+              <img alt class="w-100" src="../assets/images/httpComp.png" />
+              <br />
+              <br />
+              <h4>Api call method in service</h4>
+              <img alt class="w-100" src="../assets/images/httpService.png" />
+              <br />
+              <br />
+
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Method</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Body</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listFetchedUsingHttp; let index=index;">
+                    <th scope="row">{{index + 1}}</th>
+                    <td>{{item['method']}}</td>
+                    <td>{{item['title']}}</td>
+                    <td>{{item['body']}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Using Fetch</h5>
+              <h6 class="card-subtitle mb-2 text-body-secondary">
+                Using fetch method in async function to get the data
+              </h6>
+              <br />
+              <h4>Api call method in component</h4>
+              <img alt class="w-100" src="../assets/images/fetchComp.png" />
+              <br />
+              <br />
+              <h4>Api call method in service</h4>
+              <img alt class="w-100" src="../assets/images/fetchService.png" />
+              <br />
+              <br />
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Method</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Body</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of listFetchedUsingFetch; let index=index;">
+                    <th scope="row">{{index + 1}}</th>
+                    <td>{{item['method']}}</td>
+                    <td>{{item['title']}}</td>
+                    <td>{{item['body']}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
